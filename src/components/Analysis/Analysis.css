@@ -1,0 +1,72 @@
+/* ---- Analysis Page ---- */
+.analysis-page {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.chart-container {
+    padding: 16px 20px !important;
+}
+
+.chart-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.toolbar-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.toolbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.stock-info {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.stock-price {
+    font-family: var(--font-mono);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.stock-change {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.mini-stat {
+    text-align: center;
+    padding: 14px !important;
+}
+
+/* Radio button overrides */
+.ant-radio-button-wrapper {
+    background: var(--bg-tertiary) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-secondary) !important;
+}
+
+.ant-radio-button-wrapper-checked {
+    background: var(--color-primary-bg) !important;
+    border-color: var(--color-primary) !important;
+    color: var(--color-primary) !important;
+}
+
+@media (max-width: 768px) {
+    .chart-toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

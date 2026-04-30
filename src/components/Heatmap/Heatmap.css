@@ -1,0 +1,53 @@
+/* ---- Heatmap Page ---- */
+.heatmap-page {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.heatmap-container {
+    padding: 16px !important;
+}
+
+.heatmap-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+/* Rank rows */
+.rank-row {
+    display: grid;
+    grid-template-columns: 30px 1fr 60px 80px;
+    align-items: center;
+    padding: 10px 8px;
+    border-radius: 6px;
+    transition: background var(--transition-fast);
+    font-size: 13px;
+}
+
+.rank-row:hover {
+    background: rgba(88, 166, 255, 0.04);
+}
+
+.rank-num {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    text-align: center;
+}
+
+.rank-name {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.rank-count {
+    color: var(--text-tertiary);
+    font-size: 12px;
+}
+
+.rank-change {
+    font-family: var(--font-mono);
+    font-weight: 600;
+    text-align: right;
+}

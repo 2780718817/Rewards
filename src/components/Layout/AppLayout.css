@@ -1,0 +1,195 @@
+/* ---- AppLayout ---- */
+.app-layout {
+    background: var(--bg-primary) !important;
+}
+
+/* Sider */
+.app-sider {
+    background: var(--bg-secondary) !important;
+    border-right: 1px solid var(--border-color);
+    position: fixed !important;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-sider .ant-layout-sider-children {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.sider-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 20px 16px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 8px;
+}
+
+.logo-icon {
+    font-size: 24px;
+    background: linear-gradient(135deg, #58a6ff, #bc8cff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo-text {
+    font-size: 18px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #58a6ff, #bc8cff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+
+.sider-menu {
+    flex: 1;
+    border-right: none !important;
+}
+
+.sider-menu .ant-menu-item {
+    margin: 4px 8px !important;
+    border-radius: 8px !important;
+    height: 42px !important;
+    line-height: 42px !important;
+    color: var(--text-secondary) !important;
+    transition: all var(--transition-normal);
+}
+
+.sider-menu .ant-menu-item:hover {
+    color: var(--text-primary) !important;
+    background: rgba(88, 166, 255, 0.06) !important;
+}
+
+.sider-menu .ant-menu-item-selected {
+    color: var(--color-primary) !important;
+    background: var(--color-primary-bg) !important;
+    font-weight: 500;
+}
+
+.sider-menu .ant-menu-item-selected::after {
+    display: none;
+}
+
+.sider-footer {
+    padding: 12px 16px;
+    border-top: 1px solid var(--border-color);
+}
+
+.sider-version {
+    font-size: 11px;
+    color: var(--text-tertiary) !important;
+}
+
+/* Header */
+.app-header {
+    background: rgba(13, 17, 23, 0.85) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0 24px !important;
+    height: 56px !important;
+    line-height: 56px !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.collapse-btn {
+    font-size: 18px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: color var(--transition-fast);
+    display: flex;
+    align-items: center;
+}
+
+.collapse-btn:hover {
+    color: var(--color-primary);
+}
+
+.header-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header-search {
+    background: var(--bg-tertiary) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px !important;
+    height: 34px;
+}
+
+.header-search input {
+    background: transparent !important;
+    color: var(--text-primary) !important;
+}
+
+.header-search input::placeholder {
+    color: var(--text-tertiary) !important;
+}
+
+.header-icon {
+    font-size: 18px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: color var(--transition-fast);
+}
+
+.header-icon:hover {
+    color: var(--color-primary);
+}
+
+/* Content */
+.app-content {
+    padding: 24px;
+    margin-left: 0;
+    min-height: calc(100vh - 56px);
+    background: var(--bg-primary);
+}
+
+/* Responsive sider offset */
+.app-layout>.ant-layout {
+    margin-left: 220px;
+    transition: margin-left var(--transition-normal);
+}
+
+.app-layout>.ant-layout-sider-collapsed+.ant-layout {
+    margin-left: 68px;
+}
+
+@media (max-width: 768px) {
+    .app-sider {
+        display: none !important;
+    }
+
+    .app-layout>.ant-layout {
+        margin-left: 0 !important;
+    }
+
+    .header-search {
+        display: none;
+    }
+}

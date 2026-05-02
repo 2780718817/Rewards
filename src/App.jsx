@@ -12,10 +12,10 @@ export default function App() {
     return (
         <Routes>
             <Route path="/" element={<AppLayout />}>
-                <Route index element={<Dashboard />} />
+                <Route index element={<Screener />} />
                 <Route path="strategy" element={<Strategy />} />
                 <Route path="analysis" element={<Analysis />} />
-                <Route path="screener" element={<Screener />} />
+                <Route path="dashboard" element={<Dashboard />} />
                 <Route path="heatmap" element={<Heatmap />} />
                 <Route path="risk" element={<Risk />} />
                 <Route path="*" element={<Navigate to="/" replace />} />

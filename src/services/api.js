@@ -92,7 +92,7 @@ export function toQQCode(code) {
  * 44:最高 45:最低 46:振幅 47:流通市值 48:总市值 49:市净率
  */
 export async function fetchQQQuotes(qqCodes) {
-    const url = `/api/qq/qt?date=2026-05-02&q=${qqCodes.join(',')}`
+    const url = `/api/qq/qt?q=${qqCodes.join(',')}`
     const text = await requestText(url)
     if (!text) return null
 
